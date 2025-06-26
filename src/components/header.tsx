@@ -62,7 +62,7 @@ export function AppHeader() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#home" className="text-2xl font-bold font-headline text-primary tracking-wider">
-          DevFolio
+          S1dFolio
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <NavContent />
