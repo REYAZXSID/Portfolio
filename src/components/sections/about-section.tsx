@@ -1,16 +1,24 @@
 
 import Image from 'next/image';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
+import { Sparkles, Coffee, Code, BookOpen } from 'lucide-react';
+
+const personalAttributes = [
+  { icon: <Coffee className="h-6 w-6" />, text: "Fueled by coffee" },
+  { icon: <Code className="h-6 w-6" />, text: "Passionate about clean code" },
+  { icon: <BookOpen className="h-6 w-6" />, text: "Always learning and curious" },
+];
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-32 bg-secondary/50">
+    <section id="about" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-          <div className="md:col-span-1 flex justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+          
+          <div className="lg:col-span-2 flex justify-center">
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-0 group-hover:opacity-75 transition-opacity duration-300 blur animate-tilt"></div>
-              <Card className="relative rounded-2xl overflow-hidden shadow-2xl w-64 h-64 md:w-80 md:h-80 rotate-[-3deg] group-hover:rotate-0 group-hover:scale-105 transition-transform duration-300">
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 blur-lg animate-tilt"></div>
+              <Card className="relative rounded-2xl overflow-hidden shadow-2xl w-72 h-72 md:w-80 md:h-80 rotate-[2deg] group-hover:rotate-0 group-hover:scale-105 transition-transform duration-500 ease-in-out">
                 <Image
                   src="https://placehold.co/400x400.png"
                   alt="Portrait of the developer"
@@ -22,16 +30,33 @@ export default function AboutSection() {
               </Card>
             </div>
           </div>
-          <div className="md:col-span-2">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6 text-primary">About Me</h2>
-            <div className="space-y-4 text-lg text-muted-foreground font-body leading-relaxed">
-              <p>
-                I am a passionate and creative full-stack developer with a knack for building beautiful, functional, and user-centric web applications. With a strong foundation in both front-end and back-end technologies, I enjoy turning complex problems into simple, elegant solutions.
-              </p>
-              <p>
-                When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee. I am always eager to learn and grow, both as a developer and as an individual.
-              </p>
+
+          <div className="lg:col-span-3">
+            <div className="flex items-center gap-4 mb-6">
+                <Sparkles className="h-10 w-10 text-accent animate-pulse" />
+                <h2 className="text-3xl md:text-4xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+                    A Little About Me
+                </h2>
             </div>
+            
+            <Card className="bg-card/50 border-border/50 backdrop-blur-sm">
+                <CardContent className="p-8">
+                    <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
+                        I am a passionate and creative full-stack developer with a knack for building beautiful, functional, and user-centric web applications. With a strong foundation in both front-end and back-end technologies, I enjoy turning complex problems into simple, elegant solutions.
+                    </p>
+                    <ul className="space-y-4">
+                        {personalAttributes.map((attr, index) => (
+                            <li key={index} className="flex items-center gap-4 group/item">
+                                <div className="p-2 bg-primary/10 rounded-full text-primary group-hover/item:bg-accent group-hover/item:text-accent-foreground transition-colors duration-300">
+                                    {attr.icon}
+                                </div>
+                                <span className="font-body text-muted-foreground group-hover/item:text-foreground transition-colors duration-300">{attr.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </CardContent>
+            </Card>
+
           </div>
         </div>
       </div>
