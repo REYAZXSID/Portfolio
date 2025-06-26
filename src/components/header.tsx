@@ -1,11 +1,10 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -77,16 +76,17 @@ export function AppHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[250px] bg-background">
-              <div className="flex h-full flex-col p-6">
-                <div className="mb-8">
-                   <Link href="#home" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-bold font-headline text-primary tracking-wider">
+              <SheetHeader className="mb-8">
+                 <SheetTitle>
+                    <Link href="#home" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-bold font-headline text-primary tracking-wider">
                       DevFolio
                     </Link>
-                </div>
-                <nav className="flex flex-col gap-6">
-                  <NavContent />
-                </nav>
-              </div>
+                 </SheetTitle>
+                 <SheetDescription className="sr-only">Mobile Navigation Menu</SheetDescription>
+              </SheetHeader>
+              <nav className="flex flex-col gap-6">
+                <NavContent />
+              </nav>
             </SheetContent>
           </Sheet>
         </div>
