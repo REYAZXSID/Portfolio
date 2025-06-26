@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Download, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -22,12 +22,6 @@ export default function HeroSection() {
           <Button size="lg" className="font-headline group bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] hover:bg-[right_center] text-primary-foreground transition-all duration-500" asChild>
             <a href="#contact">
               Get in Touch <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </Button>
-          <Button size="lg" variant="outline" className="font-headline transition-colors duration-300" asChild>
-            <a href="/resume.pdf" download>
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
             </a>
           </Button>
         </div>
