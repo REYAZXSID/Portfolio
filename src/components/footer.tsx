@@ -1,7 +1,25 @@
 
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Instagram, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+
+const TelegramIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5 hover:text-primary transition-colors"
+    >
+      <path d="m22 2-7 20-4-9-9-4Z" />
+      <path d="M22 2 11 13" />
+    </svg>
+);
 
 export function AppFooter() {
   return (
@@ -18,18 +36,18 @@ export function AppFooter() {
           </div>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter className="h-5 w-5 hover:text-primary transition-colors" />
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <Instagram className="h-5 w-5 hover:text-primary transition-colors" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-5 w-5 hover:text-primary transition-colors" />
+              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <TelegramIcon />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5 hover:text-primary transition-colors" />
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                <Youtube className="h-5 w-5 hover:text-primary transition-colors" />
               </a>
             </Button>
           </div>
