@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { AppFooter } from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'DevFolio',
+  title: 'S1dFolio',
   description: 'A personal portfolio for developers.',
 };
 
