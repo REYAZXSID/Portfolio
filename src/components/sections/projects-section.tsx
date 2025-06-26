@@ -45,44 +45,47 @@ export default function ProjectsSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={project.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg group opacity-0 animate-fade-in-up" style={{ animationDelay: `${300 + index * 100}ms` }}>
-              <div className="relative overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={`Screenshot of ${project.title}`}
-                  width={600}
-                  height={400}
-                  className="object-cover w-full h-48 group-hover:scale-105 transition-transform duration-500"
-                  data-ai-hint={project.imageHint}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                 <div className="absolute bottom-0 left-0 p-4">
-                    <CardTitle className="font-headline text-xl text-white">{project.title}</CardTitle>
+            <div key={project.title} className="relative group opacity-0 animate-fade-in-up" style={{ animationDelay: `${300 + index * 100}ms` }}>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <Card className="relative flex flex-col overflow-hidden shadow-lg transition-all duration-300 rounded-lg h-full">
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={`Screenshot of ${project.title}`}
+                    width={600}
+                    height={400}
+                    className="object-cover w-full h-48 group-hover:scale-105 transition-transform duration-500"
+                    data-ai-hint={project.imageHint}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                   <div className="absolute bottom-0 left-0 p-4">
+                      <CardTitle className="font-headline text-xl text-white">{project.title}</CardTitle>
+                  </div>
                 </div>
-              </div>
-              
-              <CardContent className="p-6 flex flex-col flex-grow">
-                <p className="font-body text-muted-foreground mb-4 flex-grow">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.stack.map(tech => (
-                    <Badge key={tech} variant="secondary" className="font-body">{tech}</Badge>
-                  ))}
-                </div>
-                <div className="flex w-full justify-start gap-2 mt-auto">
-                  <Button variant="ghost" size="sm" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      GitHub
-                    </a>
-                  </Button>
-                  <Button size="sm" asChild>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer">
-                      Live Demo <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+                
+                <CardContent className="p-6 flex flex-col flex-grow">
+                  <p className="font-body text-muted-foreground mb-4 flex-grow">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.stack.map(tech => (
+                      <Badge key={tech} variant="secondary" className="font-body">{tech}</Badge>
+                    ))}
+                  </div>
+                  <div className="flex w-full justify-start gap-2 mt-auto">
+                    <Button variant="ghost" size="sm" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" />
+                        GitHub
+                      </a>
+                    </Button>
+                    <Button size="sm" asChild>
+                      <a href={project.live} target="_blank" rel="noopener noreferrer">
+                        Live Demo <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>

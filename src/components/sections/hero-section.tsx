@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
       
       <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-        <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter text-primary bg-clip-text text-transparent bg-gradient-to-br from-primary via-primary/90 to-accent">
+        <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter animate-background-pan bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent">
           Jane Doe
         </h1>
         <p className="mt-4 text-xl md:text-2xl text-muted-foreground font-body max-w-2xl mx-auto">

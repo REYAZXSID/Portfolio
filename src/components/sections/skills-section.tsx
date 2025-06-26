@@ -23,16 +23,19 @@ export default function SkillsSection() {
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Technical Skills</h2>
           <p className="mt-2 text-lg text-muted-foreground">My toolbox for building digital experiences.</p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 max-w-4xl mx-auto">
           {skills.map((skill, index) => (
-            <Card key={skill.name} className="group border-2 border-transparent hover:border-primary hover:shadow-lg hover:-translate-y-2 transition-all duration-300 opacity-0 animate-fade-in-up" style={{ animationDelay: `${300 + index * 50}ms` }}>
-              <CardContent className="flex flex-col items-center justify-center p-6 aspect-square">
-                <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300">
-                  {skill.icon}
-                </div>
-                <p className="mt-4 text-sm md:text-base font-semibold font-body text-center">{skill.name}</p>
-              </CardContent>
-            </Card>
+            <div key={skill.name} className="relative group opacity-0 animate-fade-in-up" style={{ animationDelay: `${300 + index * 50}ms` }}>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <Card className="relative h-full transform hover:-translate-y-1 transition-transform duration-300">
+                <CardContent className="flex flex-col items-center justify-center p-6 aspect-square">
+                  <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300">
+                    {skill.icon}
+                  </div>
+                  <p className="mt-4 text-sm md:text-base font-semibold font-body text-center">{skill.name}</p>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>

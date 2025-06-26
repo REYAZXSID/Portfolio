@@ -108,7 +108,7 @@ export default function ContactSection() {
                   )}
                 />
                 <div className="flex justify-center">
-                  <Button type="submit" size="lg" className="font-headline group">
+                  <Button type="submit" size="lg" className="font-headline group bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] hover:bg-[right_center] text-primary-foreground transition-all duration-500">
                     Send Message <Send className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>

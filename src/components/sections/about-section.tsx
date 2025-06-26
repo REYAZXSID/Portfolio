@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 
 export default function AboutSection() {
   return (
@@ -8,16 +8,19 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
           <div className="md:col-span-1 flex justify-center">
-            <Card className="rounded-2xl overflow-hidden shadow-2xl w-64 h-64 md:w-80 md:h-80 rotate-[-3deg] hover:rotate-0 hover:scale-105 transition-transform duration-300">
-              <Image
-                src="https://placehold.co/400x400.png"
-                alt="Portrait of the developer"
-                width={400}
-                height={400}
-                className="object-cover w-full h-full"
-                data-ai-hint="professional portrait"
-              />
-            </Card>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-0 group-hover:opacity-75 transition-opacity duration-300 blur animate-tilt"></div>
+              <Card className="relative rounded-2xl overflow-hidden shadow-2xl w-64 h-64 md:w-80 md:h-80 rotate-[-3deg] group-hover:rotate-0 group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="https://placehold.co/400x400.png"
+                  alt="Portrait of the developer"
+                  width={400}
+                  height={400}
+                  className="object-cover w-full h-full"
+                  data-ai-hint="professional portrait"
+                />
+              </Card>
+            </div>
           </div>
           <div className="md:col-span-2">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6 text-primary">About Me</h2>
