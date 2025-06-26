@@ -1,5 +1,6 @@
+
 import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
@@ -36,47 +37,51 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-16 md:py-24">
+    <section id="projects" className="py-20 md:py-32 bg-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12 text-primary">Featured Projects</h2>
+        <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Featured Projects</h2>
+            <p className="mt-2 text-lg text-muted-foreground">A selection of my recent work.</p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="p-0">
+          {projects.map((project, index) => (
+            <Card key={project.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg group opacity-0 animate-fade-in-up" style={{ animationDelay: `${300 + index * 100}ms` }}>
+              <div className="relative overflow-hidden">
                 <Image
                   src={project.image}
                   alt={`Screenshot of ${project.title}`}
                   width={600}
                   height={400}
-                  className="object-cover w-full h-48"
+                  className="object-cover w-full h-48 group-hover:scale-105 transition-transform duration-500"
                   data-ai-hint={project.imageHint}
                 />
-              </CardHeader>
-              <CardContent className="flex-1 p-6">
-                <CardTitle className="font-headline text-xl mb-2">{project.title}</CardTitle>
-                <CardDescription className="font-body text-muted-foreground mb-4">{project.description}</CardDescription>
-                <div className="flex flex-wrap gap-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                 <div className="absolute bottom-0 left-0 p-4">
+                    <CardTitle className="font-headline text-xl text-white">{project.title}</CardTitle>
+                </div>
+              </div>
+              
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <p className="font-body text-muted-foreground mb-4 flex-grow">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.stack.map(tech => (
                     <Badge key={tech} variant="secondary" className="font-body">{tech}</Badge>
                   ))}
                 </div>
-              </CardContent>
-              <CardFooter className="p-6 pt-0 bg-card">
-                <div className="flex w-full justify-end gap-2">
+                <div className="flex w-full justify-start gap-2 mt-auto">
                   <Button variant="ghost" size="sm" asChild>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" />
                       GitHub
                     </a>
                   </Button>
-                  <Button variant="outline" size="sm" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
+                  <Button size="sm" asChild>
                     <a href={project.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
+                      Live Demo <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                 </div>
-              </CardFooter>
+              </CardContent>
             </Card>
           ))}
         </div>

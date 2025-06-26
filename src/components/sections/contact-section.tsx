@@ -1,3 +1,4 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,6 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Send } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -45,19 +47,19 @@ export default function ContactSection() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
-      title: "Message Sent!",
+      title: "Message Sent! 🚀",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
     form.reset();
   }
 
   return (
-    <section id="contact" className="py-16 md:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-        <Card className="shadow-xl">
+    <section id="contact" className="py-20 md:py-32 bg-secondary/50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl opacity-0 animate-fade-in-up" style={{ animationDelay: '500ms' }}>
+        <Card className="shadow-2xl border-0">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl md:text-4xl font-headline font-bold text-primary">Get In Touch</CardTitle>
-            <CardDescription className="text-lg font-body">Have a question or want to work together? Drop me a line!</CardDescription>
+            <CardDescription className="text-lg font-body mt-2">Have a question or want to work together? Drop me a line!</CardDescription>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -106,7 +108,9 @@ export default function ContactSection() {
                   )}
                 />
                 <div className="flex justify-center">
-                  <Button type="submit" size="lg" className="font-headline bg-accent hover:bg-accent/90">Send Message</Button>
+                  <Button type="submit" size="lg" className="font-headline group">
+                    Send Message <Send className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
                 </div>
               </form>
             </Form>
