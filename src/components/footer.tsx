@@ -31,7 +31,7 @@ export function AppFooter() {
               DevFolio
             </Link>
             <p className="text-sm text-muted-foreground mt-1">
-              © {new Date().getFullYear()} S1D! | All rights reserved.
+              © {new Date().getFullYear()} S1D. | All rights reserved.
             </p>
           </div>
           <div className="flex items-center gap-2">
