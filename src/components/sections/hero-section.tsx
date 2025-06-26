@@ -16,7 +16,7 @@ export default function HeroSection() {
           className="text-5xl md:text-8xl font-bold font-headline tracking-tighter animate-background-pan bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-lg opacity-0 animate-fade-in-up" 
           style={{ animationDelay: '100ms' }}
         >
-          Jane Doe
+          REYAZ SIDDIQUE
         </h1>
         <p 
           className="mt-4 text-xl md:text-2xl text-foreground font-body max-w-2xl mx-auto flex items-center justify-center gap-2 opacity-0 animate-fade-in-up"
