@@ -7,31 +7,31 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce site with product management, shopping cart, and payment integration. Built for performance and scalability.",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "online store",
+    title: "MathMind",
+    description: "A brain-training puzzle game that sharpens your arithmetic skills with timed challenges and increasing difficulty levels. Perfect for users who love numbers and mental speed",
+    image: "https://files.catbox.moe/s5fe5p.jpg",
+    imageHint: "Brain Puzzle",
     stack: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
     github: "https://github.com",
-    live: "https://example.com"
+    live: "https://math-magix.vercel.app/"
   },
   {
-    title: "Project Management Tool",
-    description: "A collaborative tool for teams to manage tasks, track progress, and communicate effectively. Features real-time updates.",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "dashboard app",
+    title: "TakaTak",
+    description: "A clean, minimalist version of the classic Tic-Tac-Toe game with smart AI and 2-player mode. Designed for fast, fun, and strategic gameplay on all screen sizes.",
+    image: "https://files.catbox.moe/bs3wl8.png",
+    imageHint: "Tic Tac Toe",
     stack: ["React", "Firebase", "Node.js", "Tailwind CSS"],
     github: "https://github.com",
-    live: "https://example.com"
+    live: "https://tictacv1.vercel.app/"
   },
   {
-    title: "Personal Blog",
-    description: "A clean, minimalist blog built with a headless CMS for easy content management and a fast, static front-end for readers.",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "minimalist website",
+    title: "FlipX",
+    description: "A visual memory game where players flip and match tiles to win. Engaging animations, sound effects, and progressive difficulty make it fun for all ages.",
+    image: "https://files.catbox.moe/dbdswz.png",
+    imageHint: "Flip Puzzle",
     stack: ["Gatsby", "GraphQL", "Contentful", "Styled Components"],
     github: "https://github.com",
-    live: "https://example.com"
+    live: "https://flipx.vercel.app"
   }
 ];
 
