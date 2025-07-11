@@ -9,7 +9,7 @@ const projects = [
   {
     title: "MathMind",
     description: "A brain-training puzzle game that sharpens your arithmetic skills with timed challenges and increasing difficulty levels. Perfect for users who love numbers and mental speed",
-    image: "https://files.catbox.moe/s5fe5p.jpg",
+    image: "/flappy.jpg",
     imageHint: "Brain Puzzle",
     stack: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
     github: "https://github.com",
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "TakaTak",
     description: "A clean, minimalist version of the classic Tic-Tac-Toe game with smart AI and 2-player mode. Designed for fast, fun, and strategic gameplay on all screen sizes.",
-    image: "https://files.catbox.moe/bs3wl8.png",
+    image: "/takatak.jpg",
     imageHint: "Tic Tac Toe",
     stack: ["React", "Firebase", "Node.js", "Tailwind CSS"],
     github: "https://github.com",
@@ -27,7 +27,7 @@ const projects = [
   {
     title: "FlipX",
     description: "A visual memory game where players flip and match tiles to win. Engaging animations, sound effects, and progressive difficulty make it fun for all ages.",
-    image: "https://files.catbox.moe/dbdswz.png",
+    image: "/flipx.jpg",
     imageHint: "Flip Puzzle",
     stack: ["Gatsby", "GraphQL", "Contentful", "Styled Components"],
     github: "https://github.com",
