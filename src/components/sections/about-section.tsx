@@ -20,7 +20,7 @@ export default function AboutSection() {
               <div className="absolute -inset-1.5 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 blur-lg animate-tilt"></div>
               <Card className="relative rounded-2xl overflow-hidden shadow-2xl w-72 h-72 md:w-80 md:h-80 rotate-[2deg] group-hover:rotate-0 group-hover:scale-105 transition-transform duration-500 ease-in-out">
                 <Image
-                  src="https://placehold.co/400x400.png"
+                  src="https://files.catbox.moe/79x6dy.jpg"
                   alt="Portrait of the developer"
                   width={400}
                   height={400}
