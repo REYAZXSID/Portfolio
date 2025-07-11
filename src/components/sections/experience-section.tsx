@@ -1,22 +1,22 @@
 
 const experience = [
   {
-    date: "2021 - Present",
-    title: "Senior Software Engineer",
-    company: "Tech Solutions Inc.",
+    date: "2025 - Present",
+    title: "Advance Developer ",
+    company: "SidVerse Inc.",
     description: "Led the development of a scalable microservices architecture. Mentored junior developers and improved code quality across the team."
   },
   {
-    date: "2019 - 2021",
+    date: "2024 - Before",
     title: "Full-Stack Developer",
     company: "Innovate Co.",
     description: "Developed and maintained web applications using React and Node.js. Collaborated with designers to create responsive and user-friendly interfaces."
   },
   {
-    date: "2015 - 2019",
-    title: "Bachelor of Science in Computer Science",
-    company: "University of Technology",
-    description: "Graduated with honors, focusing on software development, algorithms, and data structures. Vice-president of the coding club."
+    date: "2023 - Past",
+    title: "Web Developer",
+    company: "Own Inc.",
+    description: "focusing on software development, algorithms, and data structures."
   }
 ];
 
