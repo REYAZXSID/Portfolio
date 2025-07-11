@@ -28,10 +28,10 @@ export function AppFooter() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="text-center sm:text-left">
             <Link href="#home" className="text-2xl font-bold font-headline text-primary tracking-wider">
-              S1dFolio
+              S!DVERSE
             </Link>
             <p className="text-sm text-muted-foreground mt-1">
-              © {new Date().getFullYear()} S1D! | All rights reserved.
+              © {new Date().getFullYear()} S1D!VERSE | All rights reserved.
             </p>
           </div>
           <div className="flex items-center gap-2">
