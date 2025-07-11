@@ -7,13 +7,13 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: "MathMind",
-    description: "A brain-training puzzle game that sharpens your arithmetic skills with timed challenges and increasing difficulty levels. Perfect for users who love numbers and mental speed",
+    title: "Flappy Bird",
+    description: "An endless one-tap flying game where players dodge pipes to score. Lightweight, addictive, and fun to play anytime.",
     image: "/flappy.jpg",
-    imageHint: "Brain Puzzle",
+    imageHint: "Sky Jump",
     stack: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
     github: "https://github.com",
-    live: "https://math-magix.vercel.app/"
+    live: "https://flappybirdv1.vercel.app/"
   },
   {
     title: "TakaTak",
